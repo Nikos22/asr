@@ -6,7 +6,8 @@ Vakirlis, N., Acar, O., Cherupally, V. & Carvunis, A.-R. Ancestral Sequence Reco
 
 The script run_reconstructions_clean.sh runs the necessary tools to obtain the reconstructions.
 You run it like this: ./run_reconstructions_clean.sh YBR296C-A.nt.fa species_tree.nwk 8 
-in which argument one contains the input sequences in FASTA format, argument two is the species tree in newick format, and argument three is the number of species in your analysis (and also in your species tree). This is needed because if a given input sequences is missing some species, the script adjusts. Please see comments etc. within the script. You also need to specify your outgroup species (see line 8).
+in which argument one contains the input sequences in FASTA format, argument two is the species tree in newick format, and argument three is the number of species in your analysis (and also in your species tree).
+This is needed because if a given input sequences is missing some species, the script adjusts. Please see comments etc. within the script. You also need to specify your outgroup species (see line 8).
 
 To run the script you need the following:
 - a parser called Fast2Phylip.pl (found here)
@@ -21,7 +22,10 @@ The output of all the tools is then found in a directory with your input sequenc
 
 The second script is called anc_RFC.py and what it does is that it goes ancestor by ancestor for the various reconstructions (output of previous script), and finds the ancestral ORF with the best RFC score relative to the ORF in the focal species. 
 You run it like this: python anc_RFC.py [DIR_NAME] [FOCAL_SPECIES] [NO_OF_RANDOMIZATIONS]
-The first argument is the directory that the previous script creates, where all the files are stored. The second one is the name of the focal species, as it appears within the initial FASTA file (e.g. here would be Scer). The third is the number of randomizations that the script will perform to calculate the empirical P-value. The script outputs a table with the RFC and P-value for each ancestor and tool, and it also stores all the best RFC ORFs in a file with the suffix "_bestRFC_ORFs.fasta" .
+The first argument is the directory that the previous script creates, where all the files are stored.
+The second one is the name of the focal species, as it appears within the initial FASTA file (e.g. here would be Scer).
+The third is the number of randomizations that the script will perform to calculate the empirical P-value.
+The script outputs a table with the RFC and P-value for each ancestor and tool, and it also stores all the best RFC ORFs in a file with the suffix "_bestRFC_ORFs.fasta" .
 
 The main output looks like the following:
 
