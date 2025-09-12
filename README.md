@@ -20,8 +20,7 @@ To run the script you need the following:
 The output of all the tools is then found in a directory with your input sequence name (e.g. here would be YBR296C-A).
 
 The second script is called anc_RFC.py and what it does is that it goes ancestor by ancestor for the various reconstructions (output of previous script), and finds the ancestral ORF with the best RFC score relative to the ORF in the focal species. 
-You run it like this:
-_python anc_RFC.py [DIR_NAME] [FOCAL_SPECIES] [NO_OF_RANDOMIZATIONS]  _
+You run it like this: python anc_RFC.py [DIR_NAME] [FOCAL_SPECIES] [NO_OF_RANDOMIZATIONS]
 The first argument is the directory that the previous script creates, where all the files are stored. The second one is the name of the focal species, as it appears within the initial FASTA file (e.g. here would be Scer). The third is the number of randomizations that the script will perform to calculate the empirical P-value. The script outputs a table with the RFC and P-value for each ancestor and tool, and it also stores all the best RFC ORFs in a file with the suffix "_bestRFC_ORFs.fasta" .
 
 The main output looks like the following:
