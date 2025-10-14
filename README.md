@@ -5,7 +5,10 @@ Vakirlis, N., Acar, O., Cherupally, V. & Carvunis, A.-R. Ancestral Sequence Reco
 
 
 The script **run_reconstructions_clean.sh** runs the necessary tools to obtain the reconstructions.
-You run it like this: ./run_reconstructions_clean.sh YBR296C-A.nt.fa species_tree.nwk 8 
+You run it like this: 
+```
+./run_reconstructions_clean.sh [INPUT_FASTA_FILE] [NEWICK_SPECIES_TREE] [NUM_SPECIES] 
+```
 in which argument one contains the input sequences in FASTA format, argument two is the species tree in newick format, and argument three is the number of species in your analysis (and also in your species tree).
 This is needed because if a given input sequences is missing some species, the script adjusts. Please see comments etc. within the script. You also need to specify your outgroup species (see line 8).
 
@@ -34,7 +37,7 @@ The script outputs a table with the RFC and P-value for each ancestor and tool, 
 
 The main output looks like the following:
 
-###
+```
 YBR296C-A FastML_joint species N1 0 Sarb_Scer_Seub_Sjur_Skud_Smik_Spar_Suva 0.35 0.0
 YBR296C-A FastML_joint species N2 1 Sarb_Scer_Sjur_Skud_Smik_Spar 0.35 0.0
 YBR296C-A FastML_joint species N3 2 Scer_Sjur_Skud_Smik_Spar 0.717 0.0
@@ -42,8 +45,9 @@ YBR296C-A FastML_joint species N4 3 Scer_Sjur_Smik_Spar 0.717 0.0
 YBR296C-A FastML_joint species N5 4 Scer_Sjur_Spar 0.717 0.0
 YBR296C-A FastML_joint species N6 5 Scer_Spar 0.717 0.0
 YBR296C-A FastML_joint species Scer_spec NA Scer -1 -1
-###
+```
 (disregard the last line)
 
 The column names are the following:
+
 "gene_name", "tool", "topology", "ancestor_code_of_tool", "ancestor_order", "ancestor_descendants", "best_RFC", "P-value"
