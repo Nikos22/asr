@@ -25,8 +25,10 @@ The output of all the tools is then found in a directory with your input sequenc
 
 The second script is called **anc_RFC.py** and what it does is that it goes ancestor by ancestor for the various reconstructions (output of previous script), and finds the ancestral ORF with the best RFC score relative to the ORF in the focal species. 
 
-You run it like this: python anc_RFC.py [DIR_NAME] [FOCAL_SPECIES] [NO_OF_RANDOMIZATIONS]
-
+You run it like this:
+```
+python anc_RFC.py [DIR_NAME] [FOCAL_SPECIES] [NO_OF_RANDOMIZATIONS]
+```
 The first argument is the directory that the previous script creates, where all the files are stored.
 
 The second one is the name of the focal species, as it appears within the initial FASTA file (e.g. here would be Scer).
