@@ -13,7 +13,7 @@ in which argument one contains the input sequences in FASTA format, argument two
 This is needed because if a given input sequences is missing some species, the script adjusts. Please see comments etc. within the script. You also need to specify your outgroup species (see line 8).
 
 To run the script you need the following:
-- a parser called Fast2Phylip.pl (found here)
+- a parser called Fast2Phylip.pl (included)
 - MAFFT
 - raxml-ng
 - Gotree and Goalign
